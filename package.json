@@ -1,0 +1,18 @@
+{
+  "name": "bitrix24-integration-template",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"pnpm --filter @repo/server dev\" \"pnpm --filter @repo/client dev\"",
+    "build": "pnpm -r run build",
+    "start": "pnpm run build && pnpm --filter @repo/server start",
+    "typecheck": "pnpm -r run typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.3"
+  }
+}

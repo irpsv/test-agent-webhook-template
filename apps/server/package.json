@@ -1,0 +1,22 @@
+{
+  "name": "@repo/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@bitrix24/b24jssdk": "^1.0.5",
+    "@hono/node-server": "^1.14.0",
+    "dotenv": "^17.3.1",
+    "hono": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
